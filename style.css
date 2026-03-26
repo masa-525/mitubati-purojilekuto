@@ -1,0 +1,53 @@
+/* 余白リセット（超重要） */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ヘッダー */
+header {
+  background-color: #03AED2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ロゴ */
+.logo {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* メニュー */
+.man {
+  margin-right: 20px; /* ← 修正済み */
+  text-decoration: none;
+  color: black;
+}
+
+/* 画像エリア */
+.mv {
+  margin: 0;
+}
+
+.mv img {
+  width: 100%;
+  display: block; /* ← 隙間防止 */
+}
+
+/* コンテンツ */
+.content {
+  padding: 20px;
+}
+
+.setumei {
+  margin-top: 10px;
+}
+.zep {
+  text-decoration: none;
+  color: black;
+}
