@@ -7,38 +7,32 @@
     <title>みんなの雑談場所 ホームページ</title>
   </head>
   <body>
-    <header>
+    <header id="header">
       <a href="" class="logo">
         みんなの雑談場所<br>ホームページ
       </a>
-      <div class="row">
-       <a href="" class="man">お知らせ</a>
-        <a href="" class="man">ルール</a>
-        <a href="" class="man">リンク</a>
-        <a href="" class="man">写真集</a>
-        <a href="" class="man">お問い合わせ</a>
+      <div class="manyu">
+       <span> </span>
+       <span> </span>
+       <span> </span>
       </div>
+       <nav>
+          <ul>
+             <li><a href="">ホーム</a></li>  
+            <li><a href="">商品一覧</a></li>
+            <li><a href="">よくある質問</a></li>
+          </ul>
+       </nav>
     </header>
-    
-    <main>
-       <div class="mv">
-　　　　　 <img src="IMG_0854.jpeg" width="100%">
-       </div>
-       <div class="content">
-         <h1>みんなの雑談場所のホームページへようこそ！ </h1>
-         
-          <p class="setumei1">--はじめに--</p>
-         <p class="setumei2">
-         ここは<a href="" class="man">「Zep」</a>というサイトでえいかつ殿が運営する<a href="" class="man">「みんなの雑談場所」</a>のホームページです。<a href="" class="man">「みんなの雑談場所」</a>の情報などをどんどん上げていきます！<a href="" class="man">ルール</a>をよく読んで、正しく、楽しく過ごしましょう！
-         </p>
-　　　　　　<p class="setumei3">--みんなの雑談場所の入り方--</p>
-        <p class="setumei4">
-          zepのみんなの雑談場所の入り方は右上にあるリンクを押していただき、そこから入れます。ぜひみんな入ってね！！
-          </p>
-         
-            <a href="zep">みんなの雑談場所</a>
-       </div>
     </main>
-    
+<script>
+    const hmbBtn = document.getElementById("manyu");
+    const header = document.getElementById("header");
+
+    hmbBtn.addEventListener("click", function() {
+      header.classList.toggle("active");
+    });
+  </script>
+
   </body>
 </html>
