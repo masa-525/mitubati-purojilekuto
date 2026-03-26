@@ -1,85 +1,166 @@
-html {
-  font-family:'M PLUS 1', sans-serif;
-  overflow-x: hidden;
+/* Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-main,footer {
-  text-align: center;
-  padding:100px;
+
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    background-color: #ffffff;
+    color: #333;
 }
-#header {
-  background-color: #ffa500;
-  width: 90%;
-  max-width: 1000px;
-  height: 70px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+/* Header & Container */
+.header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-#header.active {
-  background-color: lightblue;
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-/* 非アクティブ　*/
-#manyu {
-  width: 32px;
-  height: 28px;
-  cursor: pointer;
-  position: relative;
-  z-index: 30;
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
-#manyu span {
-  width: 32px;
-  height: 3px;
-  display: block;
-  background-color: #000000; 
-  border-radius: 2px;
-  position: absolute;
-  transition: .2s;
+
+.logo .icon {
+    font-size: 24px;
 }
-#manyu span:first-child {top: 0; }
-#manyu span:nth-child(2){top: 12px; }
-#manyu span:last-child{top: 24px; }
-nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 250px;
-  max-width: 400px;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  background-color: #fafad2;
-  z-index: 20;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateX(100%);
-  transition: .2s;
+
+.logo .title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #2d2d2d;
 }
-/* アクティブ */
-.active #manyu span:first-child{
-  top: 12px;
-  transform: rotate(45deg);
+
+/* Desktop Nav */
+.desktop-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
 }
-.active #manyu span:nth-child(2) {
-   opacity: 0;
+
+.desktop-nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
 }
-.active #manyu span:last-child {
-  top: 12px;
-  transform: rotate(-45deg);
+
+.desktop-nav a:hover {
+    color: #f39c12;
 }
-.active nav {
-  visibility: visible;
-  opacity: 1;
-  transform: translex(0);
+
+/* Hamburger Button */
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+    gap: 6px;
 }
-.active::before {
-  content: '';
-  position: fixed;
-  top: 0; right: 0;
-  background-color: black;
-  width: 100vw;
-  height: 100vh;
-  opacity: 0.4;
-  z-index: 10;
+
+.hamburger-btn .line {
+    width: 28px;
+    height: 2px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger Animation */
+.hamburger-btn.open .line1 {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-btn.open .line2 {
+    opacity: 0;
+}
+
+.hamburger-btn.open .line3 {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Nav Styles */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    width: 280px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1050;
+    padding: 100px 30px 40px;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.05);
+}
+
+.mobile-nav.active {
+    right: 0;
+}
+
+.mobile-nav ul {
+    list-style: none;
+}
+
+.mobile-nav li {
+    margin-bottom: 25px;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1040;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+    .hamburger-btn {
+        display: flex;
+    }
 }
