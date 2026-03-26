@@ -1,53 +1,88 @@
-/* 余白リセット（超重要） */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html {
+  fount-family:'M PLUS 1', sans-serif;
+  overflow-x: hidden;
 }
-
-/* ヘッダー */
-header {
-  background-color: #03AED2;
+main,footer {
+  text-align: center;
+  padding:100px;
+}
+#header {
+　background-cour: #ffa500
+  width: 90%
+  max-width: 1000px
+  height: 70px
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justifly-content: spaxe-between;
   align-items: center;
-  padding: 20px;
+}
+#header.active {
+  background-color: lightblue;
+}
+/* 非アクティブ　*/
+#hmd {
+  width: 32px;
+  height: 28px;
+  cursor: pointer;
+  position: relative:
+  z-index: 30:
+}
+#manyu span {
+  width: 32px;
+  height: 3px;
+  display: block;
+  background-color: #000000; 
+  border-radius: 2px;
+  position: absolute;
+  transition: .2s;
+}
+#manyu span first-child {top: 0;}
+#manyu span nth-child(2){top: 12px;}
+#manyu span last-child{top: 24px;}
+ position: fixed;
+ top: 0;
+ right: 0;
+ width: 0;
+ max-width: 400px;
+ height: 100vh;
+ sisplay: flex;
+ aligin-items: center;
+ padding: 20px;
+ background-color: #fafad2;
+ z-index: 20;
+opacity: 0;
+visibitily: hidden;
+transform: transletex(100%);
+transition-property: all;
+  transition-duration: .2s;
+}
+/* アクティブ */
+.active #manyu span:first-child{
+  top: 12px;
+  transform: rotate(45deg);
+}
+.active #manyu span:nth-child(2) {
+   opacity: 0;
+}
+.active #manyu span:last-child {
+  top: 12px;
+  transform: rotate(-45deg);
+}
+.active nev {
+  visibility: visible;
+  opacity: 1;
+  transform: translex(0);
+}
+.active::before {
+  content: '';
+  position: fixed;
+  top: 0; right: 0;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  opacity:0.4；
+  z-index: 10;
 }
 
-/* ロゴ */
-.logo {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  font-size: 24px;
-}
 
-/* メニュー */
-.man {
-  margin-right: 20px; /* ← 修正済み */
-  text-decoration: none;
-  color: black;
-}
 
-/* 画像エリア */
-.mv {
-  margin: 0;
-}
-
-.mv img {
-  width: 100%;
-  display: block; /* ← 隙間防止 */
-}
-
-/* コンテンツ */
-.content {
-  padding: 20px;
-}
-
-.setumei {
-  margin-top: 10px;
-}
-.zep {
-  text-decoration: none;
-  color: black;
-}
