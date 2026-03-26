@@ -1,37 +1,75 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="ja">
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ミツバチプロジェクト</title>
     <link rel="stylesheet" href="style.css">
-    <title>みんなの雑談場所 ホームページ</title>
-  </head>
-  <body>
-    <header id="header">
-      <a href="" class="logo">
-        みんなの雑談場所<br>ホームページ
-      </a>
-      <div id="manyu">
-       <span> </span>
-       <span> </span>
-       <span> </span>
-      </div>
-       <nav>
-          <ul>
-             <li><a href="">ホーム</a></li>  
-            <li><a href="">商品一覧</a></li>
-            <li><a href="">よくある質問</a></li>
-          </ul>
-       </nav>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo Section -->
+            <div class="logo">
+                <span class="icon">🐝</span>
+                <h1 class="title">ミツバチプロジェクト</h1>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#">ホーム</a></li>
+                    <li><a href="#">商品一覧</a></li>
+                    <li><a href="#">よくある質問 Q&A</a></li>
+                </ul>
+            </nav>
+
+            <!-- Hamburger Button -->
+            <button id="menu-btn" class="hamburger-btn" aria-label="Menu">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </button>
+        </div>
     </header>
-<script>
-    const hmbBtn = document.getElementById("manyu");
-    const header = document.getElementById("header");
 
-    hmbBtn.addEventListener("click", function() {
-      header.classList.toggle("active");
-    });
-  </script>
+    <!-- Overlay Background -->
+    <div id="overlay" class="overlay"></div>
 
-  </body>
+    <!-- Mobile Navigation Menu -->
+    <nav id="mobile-menu" class="mobile-nav">
+        <ul>
+            <li><a href="#">ホーム</a></li>
+            <li><a href="#">商品一覧</a></li>
+            <li><a href="#">よくある質問 Q&A</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area (Empty as requested) -->
+    <main class="content">
+        <!-- Content removed -->
+    </main>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('overlay');
+
+        const toggleMenu = () => {
+            menuBtn.classList.toggle('open');
+            mobileMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            if (mobileMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        };
+
+        menuBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+    </script>
+</body>
 </html>
