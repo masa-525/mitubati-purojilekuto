@@ -35,6 +35,11 @@ body {
     align-items: center;
     gap: 8px;
 }
+.logo-img {
+height: 50px;/* ロゴの表示サイズ */
+width: auto;
+display: block;
+}
 
 .logo .icon {
     font-size: 24px;
