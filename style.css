@@ -36,7 +36,7 @@ body {
     gap: 8px;
 }
 .logo-img {
-height: 50px;/* ロゴの表示サイズ */
+height: 10px;/* ロゴの表示サイズ */
 width: auto;
 display: block;
 }
