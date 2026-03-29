@@ -36,9 +36,8 @@ body {
     gap: 8px;
 }
 .logo-img {
-height: 1px;/* ロゴの表示サイズ */
-width: auto;
-display: block;
+width: 10%;
+display: 10%;
 }
 
 .logo .icon {
