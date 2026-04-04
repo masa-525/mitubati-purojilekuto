@@ -36,8 +36,8 @@ body {
     gap: 8px;
 }
 .logo-img {
-width: 10%;
-display: 10%;
+　　　height: 40px;
+    width: auto;
 }
 
 .logo .icon {
