@@ -1,5 +1,5 @@
 body{
- margin: 0;
+ margin: 0 0 0 0;
 }
 .header{
  background: gray;
@@ -7,5 +7,5 @@ body{
 
 .header h1{
   color: orange;
-  margin: 0;
+  margin: 0 0 0 0;
 }
