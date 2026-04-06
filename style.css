@@ -1,12 +1,83 @@
 body {
- margin: 0;
-}
-header {
- background-color: gray;
- padding: 20px;
+  margin: 0;
 }
 
+/* ヘッダー */
+header {
+  background-color: #333;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* タイトル */
 h1 {
-  color: orange;
   margin: 0;
+  font-size: 24px;
+  color: orange;
+}
+
+/* ハンバーガー */
+.menu-btn {
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.menu-btn span {
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* スマホ用メニュー */
+#menu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: #444;
+}
+
+#menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#menu li {
+  padding: 15px;
+  color: white;
+  border-bottom: 1px solid #555;
+}
+
+/* ===================== */
+/* タブレット・PC */
+@media (min-width: 768px) {
+
+  .menu-btn {
+    display: none;
+  }
+
+  #menu {
+    display: block !important;
+    position: static;
+    width: auto;
+    background: none;
+  }
+
+  #menu ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  #menu li {
+    border: none;
+    padding: 0;
+  }
 }
