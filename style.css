@@ -3,6 +3,7 @@ body{
 }
 .header{
  background: gray;
+ padding: 10px 0;
 }
 
 .header h1{
