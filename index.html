@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ミツバチプロジェクト</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ミツバチプロジェクト</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-　<!-- ヘッダー -->
-  <header>
-    <!-- タイトル -->
-    <h1>ミツバチプロジェクト</h1>
 
-    <!-- ハンバーガー(スマホ) -->
-    <div class="menu-btn" id="menuBtn">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+    <header class="main-header">
+        <h1 class="header-title">ミツバチプロジェクト</h1>
 
-    <!-- メニュー(pc,ipad) -->
-    <nav id="menu">
-      <ul>
-        <li>ホーム</li>
-        <li>活動内容</li>
-        <li>お問い合わせ</li>
-      </ul>
-    </nav>
-  </header>
+        <div class="menu-toggle-wrapper" id="mobile-menu">
+            <div class="hexagon-bg">
+                <div class="hamburger-lines">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
 
-  <script src="script.js"></script>
+        <nav class="nav-container" id="nav-menu">
+            <ul class="nav-list">
+                <li><a href="#">ホーム</a></li>
+                <li><a href="#">プロジェクトについて</a></li>
+                <li><a href="#">活動報告</a></li>
+                <li><a href="#">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script src="script.js"></script>
 </body>
 </html>
