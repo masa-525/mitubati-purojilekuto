@@ -1,1 +1,11 @@
+body{
+ margin: 0;
+}
+.header{
+ background: gray;
+}
 
+.header h1{
+  color: orange;
+  margin: 0;
+}
